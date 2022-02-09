@@ -1,23 +1,19 @@
 <?php
 
 namespace Database\Seeders;
-
-use App\Models\Categorias;
+use App\Models\Categoria;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class CategoriaSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(CategoriaSeeder::class);
-        $this->call(ProductoSeeder::class);
-
-     
+         Categoria::factory()->count(10)->create();
     }
 }

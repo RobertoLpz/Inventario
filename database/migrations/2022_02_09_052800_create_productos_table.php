@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('descripcion');
             $table->double('precio');
             $table->integer('cantidad');
+            $table->integer('calificacion');
             $table->enum('estado', ['Con inventario', 'Sin inventario']);
             $table->timestamps();
         });
